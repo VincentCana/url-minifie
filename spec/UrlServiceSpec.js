@@ -4,20 +4,41 @@ const methodPrefix = "=> ";
 const messagePrefix = "-- ";
 
 describe("UrlService", () => {
-    // Method UT
     describe(methodPrefix + "addUrl", () => {
-        // Test case - duplicate this for multiple tests
-        it(messagePrefix + "", next => {
+        it(messagePrefix + "http://blabla.com", next => {
+            let res = UrlService.addUrl("http://blabla.com");
+            expect(res).toBeTruthy();
+            next();
         });
-    });
-    describe(methodPrefix + "checkUrl", () => {
-        // Test case - duplicate this for multiple tests
-        it(messagePrefix + "", next => {
+        it(messagePrefix + "htt://blabla.com", next => {
+            let res = UrlService.addUrl("htt://blabla.com");
+            expect(res).toBeFalsy();
+            next();
         });
-    });
-    describe(methodPrefix + "getUrl", () => {
-        // Test case - duplicate this for multiple tests
+        it(messagePrefix + "http//blabla.com", next => {
+            let res = UrlService.addUrl("http//blabla.com");
+            expect(res).toBeFalsy();
+            next();
+        });
+        it(messagePrefix + "http:blabla.com", next => {
+            let res = UrlService.addUrl("http:blabla.com");
+            expect(res).toBeFalsy();
+            next();
+        });
+        it(messagePrefix + "http://blabla", next => {
+            let res = UrlService.addUrl("http://blabla");
+            expect(res).toBeFalse();
+            next();
+        });
         it(messagePrefix + "", next => {
+            let res = UrlService.addUrl("");
+            expect(res).toBeFalse();
+            next();
+        });
+        it(messagePrefix + "blabla", next => {
+            let res = UrlService.addUrl("blabla");
+            expect(res).toBeFalsy();
+            next();
         });
     });
 });
