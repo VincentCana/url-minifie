@@ -6,11 +6,6 @@ const messagePrefix = "-- ";
 describe("UrlService", () => {
     describe(methodPrefix + "addUrl", () => {
 
-        afterEach(() => {
-            expect(UrlService.checkUrl)
-                .toHaveBeenCalled();
-        });
-
         it(messagePrefix + "Correct url", next => {
             let res = UrlService.addUrl("http://blabla.com");
             expect(res)
@@ -38,13 +33,13 @@ describe("UrlService", () => {
         it(messagePrefix + "Missing .com", next => {
             let res = UrlService.addUrl("http://blabla");
             expect(res)
-                .toBeFalse();
+                .toBeFalsy();
             next();
         });
         it(messagePrefix + "Url is empty", next => {
             let res = UrlService.addUrl("");
             expect(res)
-                .toBeFalse();
+                .toBeFalsy();
             next();
         });
         it(messagePrefix + "Missing http:// and .com", next => {
