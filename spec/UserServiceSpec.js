@@ -1,4 +1,6 @@
+
 const UserService = require('app/services/UserService');
+
 
 const methodPrefix = "=> ";
 const messagePrefix = "-- ";
@@ -75,5 +77,38 @@ describe("UserService", () => {
             expect(password).toBeFalsy();
             next();
         });
-  });  
+    }); 
+
+    describe(methodPrefix + '=> confirmPasswordValidator', () => {
+        it(messagePrefix + 'Should return true', next => {
+            let validateResponse = UserService.confirmPasswordValidator('toto', 'toto')
+            expect(validateResponse).toBeTruthy()
+            next()
+        })
+
+        it(messagePrefix + 'Should return false', next => {
+            let validateResponse = UserService.confirmPasswordValidator('', '')
+            expect(validateResponse).toBeFalsy()
+            next()
+        })
+
+        it(messagePrefix + 'Should return false', next => {
+            let validateResponse = UserService.confirmPasswordValidator('toto', '')
+            expect(validateResponse).toBeFalsy()
+            next()
+        })
+
+        it(messagePrefix + 'Should return false', next => {
+            let validateResponse = UserService.confirmPasswordValidator('', 'toto')
+            expect(validateResponse).toBeFalsy()
+            next()
+        })
+
+        it(messagePrefix + 'Should return false', next => {
+            let validateResponse = UserService.confirmPasswordValidator('toto', 'azazaz')
+            expect(validateResponse).toBeFalsy()
+            next()
+        })
+    })  
 });
+
