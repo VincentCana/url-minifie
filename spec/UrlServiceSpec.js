@@ -51,13 +51,14 @@ describe("UrlService", () => {
     });
 
     describe(methodPrefix + "getUrls", () => {
-        it(messagePrefix + "http://blabla.com", next => {
+        it(messagePrefix + "Get urls and are correctly returned", next => {
             UrlService.getUrls(callback);
 
             function callback(urls) {
                 expect(urls)
                     .toBeDefined();
-                expect(urls);
+                expect(Array.isArray(urls)).toBe(true);
+
                 next();
             }
         });
