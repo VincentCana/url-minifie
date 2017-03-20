@@ -1,0 +1,14 @@
+{
+  "name": "url-minifie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node spec || true"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
