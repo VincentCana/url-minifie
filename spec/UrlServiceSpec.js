@@ -1,4 +1,4 @@
-const urlCtrl = require('app/services/UrlService.js');
+const UrlService = require('../app/controllers/UrlController.js');
 
 const methodPrefix = "=> ";
 const messagePrefix = "-- ";
