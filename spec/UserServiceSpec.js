@@ -1,4 +1,4 @@
-const UserService = require('app/services/UserService.js');
+const UserService = require('../app/services/UserService.js');
 
 const methodPrefix = "=> ";
 const messagePrefix = "-- ";
