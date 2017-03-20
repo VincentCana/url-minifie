@@ -1,9 +1,9 @@
-const urlCtrl = require('app/controllers/UrlController.js');
+const userCtrl = require('app/services/UserService.js');
 
 const methodPrefix = "=> ";
 const messagePrefix = "-- ";
 
-describe("UrlController", () => {
+describe("UserService", () => {
     // Method UT
     describe(methodPrefix + "", () => {
         // Test case - duplicate this for multiple tests
