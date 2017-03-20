@@ -1,14 +1,20 @@
 {
-  "name": "url-minifie",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jasmine-node spec || true"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "jasmine-node": "^1.14.5"
-  }
+    "name": "url-minifie",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jasmine-node spec || true"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "1.8",
+        "express": "4.13.3",
+        "jsonwebtoken": "^7.1.9",
+        "mongoose": "^4.6.3"
+    },
+    "devDependencies": {
+        "jasmine-node": "^1.14.5"
+    }
 }
