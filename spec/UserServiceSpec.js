@@ -7,7 +7,7 @@ const messagePrefix = "-- ";
 
 describe("UserService", () => {
     // Method UT
-    describe(methodPrefix + '=> emailValidator', () => {
+    describe(methodPrefix + 'emailValidator', () => {
         it(messagePrefix + 'Should return true', next => {
             let validateResponse = UserService.emailValidator('toto@gg.com')
             expect(validateResponse).toBeTruthy()
@@ -55,7 +55,7 @@ describe("UserService", () => {
         it(messagePrefix + "Password has wrong special character", next => {
             let password = userCtrl.passwordValidator("!=empty");
             expect(password).toBeFalsy();
-            next();  
+            next();
         });
         it(messagePrefix + "Password has no capitalcase character", next => {
             let password = userCtrl.passwordValidator("!aze0");
@@ -77,9 +77,9 @@ describe("UserService", () => {
             expect(password).toBeFalsy();
             next();
         });
-    }); 
+    });
 
-    describe(methodPrefix + '=> confirmPasswordValidator', () => {
+    describe(methodPrefix + 'confirmPasswordValidator', () => {
         it(messagePrefix + 'Should return true', next => {
             let validateResponse = UserService.confirmPasswordValidator('toto', 'toto')
             expect(validateResponse).toBeTruthy()
@@ -109,6 +109,5 @@ describe("UserService", () => {
             expect(validateResponse).toBeFalsy()
             next()
         })
-    })  
+    })
 });
-
