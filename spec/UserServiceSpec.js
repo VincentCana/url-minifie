@@ -8,6 +8,7 @@ describe("UserService", () => {
     describe(methodPrefix + "", () => {
         // Test case - duplicate this for multiple tests
         it(messagePrefix + "", next => {
+
         });
     });
 });
