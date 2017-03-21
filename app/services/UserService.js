@@ -1,4 +1,5 @@
 const UserController = require ('../controllers/UserController');
+const UserEntity = require('../models/UserEntity')
 
 class UserService {
     emailValidator(mail) {
@@ -9,10 +10,10 @@ class UserService {
     passwordValidator(password) {
         let RegExp = /(?=.{5,})(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[!#?$])/;
         if (RegExp.test(password)) {
-            return (true);
+            return true;
         }
         else {
-            return (false);
+            return false;
         }
 
     }
@@ -30,6 +31,7 @@ class UserService {
     }
 
     userRegister( mail, password) {
+
 
     }
 }

@@ -7,6 +7,11 @@ class UserController {
         let password = UserService.passwordValidator(post.password);
         let confirmPassword = UserService.confirmPasswordValidator(post.confirmPassword);
 
+        if(mail && password && confirmPassword){
+            let userRegister = UserService.userRegister(post.email, post.password);
+            
+        }
+
         res.send({
             mail: mail,
             password: password,
