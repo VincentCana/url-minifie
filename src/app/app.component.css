@@ -4,6 +4,10 @@ body {
   background: #F5F2F0;
 }
 
+.errorMessage{
+  color :red;
+}
+
 .formContainer {
 
 }
