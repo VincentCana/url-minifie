@@ -1,7 +1,6 @@
 const UrlService = require('../services/UrlService');
 const UserService = require('../services/UserService');
 
-
 class UrlController {
 
     addUrl(req, res) {
