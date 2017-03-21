@@ -28,6 +28,10 @@ class UserService {
             return false;
         }
     }
+
+    userRegister( mail, password) {
+
+    }
 }
 
 module.exports = new UserService();
