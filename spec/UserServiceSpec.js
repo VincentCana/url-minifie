@@ -48,32 +48,32 @@ describe("UserService", () => {
     describe(methodPrefix + "Password Validator", () => {
         // Test case - duplicate this for multiple tests
         it(messagePrefix + "Password is ok", next => {
-            let password = userCtrl.passwordValidator("!Aze0");
+            let password = UserService.passwordValidator("!Aze0");
             expect(password).toBeTruthy();
             next();
         });
         it(messagePrefix + "Password has wrong special character", next => {
-            let password = userCtrl.passwordValidator("!=empty");
+            let password = UserService.passwordValidator("!=empty");
             expect(password).toBeFalsy();
             next();
         });
         it(messagePrefix + "Password has no capitalcase character", next => {
-            let password = userCtrl.passwordValidator("!aze0");
+            let password = UserService.passwordValidator("!aze0");
             expect(password).toBeFalsy();
             next();
         });
         it(messagePrefix + "Password has no number", next => {
-            let password = userCtrl.passwordValidator("!Azee");
+            let password = UserService.passwordValidator("!Azee");
             expect(password).toBeFalsy();
             next();
         });
         it(messagePrefix + "Password has no lowercase character", next => {
-            let password = userCtrl.passwordValidator("!AZE0");
+            let password = UserService.passwordValidator("!AZE0");
             expect(password).toBeFalsy();
             next();
         });
         it(messagePrefix + "Password has no special character", next => {
-            let password = userCtrl.passwordValidator("Azert");
+            let password = UserService.passwordValidator("Azert");
             expect(password).toBeFalsy();
             next();
         });
