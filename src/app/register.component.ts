@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './register.component.html',
-  //styleUrls: ['./register.component.css']
+  styleUrls: ['./app.component.css']
 })
 export class RegisterComponent {
   title = 'Register!';
