@@ -1,5 +1,5 @@
 
-const UserService = require('app/services/UserService');
+const UserService = require('../app/services/UserService');
 
 
 const methodPrefix = "=> ";
