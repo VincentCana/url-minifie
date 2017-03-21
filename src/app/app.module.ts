@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { RegisterComponent} from './register.component';
+import { AuthentificationComponent } from './authentification.component';
 import {Routes, RouterModule} from "@angular/router";
 
 
@@ -15,11 +16,11 @@ const appRoutes: Routes = [
 ];
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    AuthentificationComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +29,6 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AuthentificationComponent]
 })
 export class AppModule { }
