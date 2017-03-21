@@ -4,15 +4,28 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { RegisterComponent} from './register.component';
+import {Routes, RouterModule} from "@angular/router";
+
+
+const appRoutes: Routes = [
+  {path: '', redirectTo: '/register',pathMatch: 'full'},
+  { path: 'register', component: RegisterComponent },
+
+];
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
