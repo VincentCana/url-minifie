@@ -30,7 +30,7 @@ module.exports = {
     addUrl: addUrl,
     getUrl: getUrl,
     getUrls: getUrls,
-    delUrl: addUrl
+    delUrl: delUrl
 };
 
 getUrl('google.fr');
