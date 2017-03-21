@@ -9,6 +9,13 @@ class UrlController {
         console.log(tmp);
     }
 
+  removeUrl(req, res){
+    res.send('remove Url')
+  }
+
+  getUrls(req, res){
+    res.send('get urls')
+  }
 }
 
 module.exports = new UrlController();
