@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const UrlController =  require('../controllers/UrlController');
 
-console.log(UrlController);
 
 router.post('/add-url', UrlController.addUrl);
 //router.post('/remove-url', UrlController.removeUrl);
