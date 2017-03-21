@@ -5,3 +5,6 @@ var urlSchema = new Schema({
     url: String,
     urlMinifie: String
 });
+
+
+module.exports = urlSchema;

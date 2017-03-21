@@ -9,3 +9,5 @@ var userSchema = new Schema({
         urlMinifie: String
     }]
 });
+
+module.exports = userSchema;
