@@ -12,6 +12,7 @@ import {Routes, RouterModule} from "@angular/router";
 const appRoutes: Routes = [
   {path: '', redirectTo: '/register',pathMatch: 'full'},
   { path: 'register', component: RegisterComponent },
+  { path: 'login', component: AuthentificationComponent },
 
 ];
 
@@ -29,6 +30,6 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
-  bootstrap: [AuthentificationComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
