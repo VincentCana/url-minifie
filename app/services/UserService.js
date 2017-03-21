@@ -8,8 +8,8 @@ class UserService {
     }
 
     passwordValidator(password) {
-        let reg = new RegExp('^[A-Za-z0-9!?#$]');
-        if(reg.test(password))
+        let RegExp = /(?=.{5,})(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[!#?$])/;
+        if(RegExp.test(password))
         {
             return(true);
         }
@@ -18,15 +18,15 @@ class UserService {
             return(false);
         }
 
-
-        return passwordverify
     }
 
     confirmPasswordValidator(password, confirmpassword) {
-        if (password === confirmpassword){
-            return (true);
-        }else {
-            return (false);
+        if (password != null || password != ''){
+            if (password === confirmpassword){
+                return true;
+            }else {
+                return false;
+            }
         }
     }
 }
