@@ -16,6 +16,7 @@ export class AuthentificationComponent {
 
   email = null;
   password = null;
+  errorMessage = "";
 
   onSubmit() {
     this.login();
@@ -34,6 +35,9 @@ export class AuthentificationComponent {
         localStorage.setItem('user', JSON.stringify(user));
         this.router.navigateByUrl('/dashboard');
       })
-      .catch(e => console.error(e));
+      .catch((res) => {
+        const message = res.json().message;
+        this.errorMessage = message;
+      });
   }
 }
