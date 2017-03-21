@@ -12,5 +12,9 @@ class UserController {
         res.send('yop connect');
     }
 
+    connect(req, res) {
+        res.send('coucou')
+    }
+
 }
 module.exports = new UserController();
