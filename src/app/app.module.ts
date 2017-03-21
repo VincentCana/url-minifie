@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header.component';
 import { RegisterComponent} from './register.component';
 import { AuthentificationComponent } from './authentification.component';
 import { DashboardComponent } from './dashboard.component';
@@ -24,7 +23,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     RegisterComponent,
     AuthentificationComponent,
     DashboardComponent,
