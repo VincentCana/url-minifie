@@ -1,4 +1,5 @@
 const UrlService = require('../services/UrlService');
+const UserService = require('../services/UserService');
 
 
 class UrlController {
@@ -9,13 +10,13 @@ class UrlController {
         console.log(tmp);
     }
 
-  removeUrl(req, res){
-    res.send('remove Url')
-  }
+    removeUrl(req, res) {
+        res.send('remove Url');
+    }
 
-  getUrls(req, res){
-    res.send('get urls')
-  }
+    getUrls(req, res) {
+        res.send('get urls');
+    }
 }
 
 module.exports = new UrlController();

@@ -9,3 +9,5 @@ var insertUrl = function(url, urlMinifie) {
         urlMinifie
     });
 };
+
+module.exports = Url;
