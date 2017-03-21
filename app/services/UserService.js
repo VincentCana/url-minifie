@@ -1,11 +1,15 @@
-const UserController = require ('../controllers/UserController')
-const UserServiceSpec = require ('../../spec/UserServiceSpec')
+const UserController = require ('../controllers/UserController');
+const UserServiceSpec = require ('../../spec/UserServiceSpec');
 
 class UserService {
-    emailValidator(mailteste){
-        let reg = new RegExp('^[A-Za-z0-9]+(!?#$)');
+    emailValidator(mail){
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(mail);
+    }
 
-        if(reg.test(mailteste))
+    passwordValidator(password) {
+        let reg = new RegExp('^[A-Za-z0-9!?#$]');
+        if(reg.test(password))
         {
             return(true);
         }
@@ -13,10 +17,9 @@ class UserService {
         {
             return(false);
         }
-    }
 
-    passwordValidator(passwordtest) {
-        let passwordverify = htmlentities(passwordtest)
+
+        return passwordverify
     }
 
     confirmPasswordValidator(password, confirmpassword) {
@@ -27,3 +30,5 @@ class UserService {
         }
     }
 }
+
+module.exports = new UserService();
