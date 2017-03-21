@@ -1,16 +1,16 @@
 // imports
 var Url = require('../models/UrlEntity');
 var jwt = require('jsonwebtoken');
-var config = require('../config');
 
 
-function addUrl(user, url, done) {}
 
-function getUrls(user) {}
+function addUrl() {}
 
-function getUrl(user, url) {}
+function getUrls() {}
 
-function delUrl(user, url) {}
+function getUrl() {}
+
+function delUrl() {}
 
 // Export des méthodes publiques
 module.exports = {

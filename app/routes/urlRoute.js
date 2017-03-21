@@ -1,8 +1,11 @@
 const express = require('express');
-const app = express();
-const UrlController = require('../controllers/UrlController');
+const router = express.Router();
+const UrlController =  require('../controllers/UrlController');
 
-app.get('/add-url', UrlController.addUrl);
-app.get('/remove-url', UrlController.removeUrl);
-app.get('/get-urls', UrlController.getUrls);
+console.log(UrlController);
 
+router.post('/add-url', UrlController.addUrl);
+//router.post('/remove-url', UrlController.removeUrl);
+//router.post('/get-urls', UrlController.getUrls);
+
+module.exports = router;
