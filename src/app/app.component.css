@@ -25,3 +25,7 @@ body {
 .formContainer button[type="submit"] {
   width: 100%;
 }
+
+.btn-add-url {
+  width: 100%;
+}
