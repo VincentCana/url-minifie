@@ -1,7 +1,9 @@
-const UserService = require('../services/UserService')
+const UserService = require('../services/UserService');
 
-function UserController() {
- 
+class UserController {
+    register(req, res) {
+        res.send('coucou register');
+    }
+
 }
-
-module.exports = UserController;
+module.exports = new UserController();
