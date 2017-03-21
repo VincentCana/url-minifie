@@ -11,6 +11,7 @@ function addUrl() {}
 function getUrls() {}
 
 function getUrl(url) {
+    console.log(url);
     UrlEntity.find()
         .then((doc) => {
             console.log(doc);
