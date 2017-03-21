@@ -1,4 +1,4 @@
-const request = require("request");
+const request = require("axios");
 
 const base_url = "http://localhost:3000/";
 
@@ -14,11 +14,11 @@ describe("UserController", () => {
                 passwordConfirm: 'Toto123!'
             }
 
-            request.post({url: base_url + "register", user: user}, function(error, response, body) {
-                expect(response.status).toBe(200)
-            });
-
-            next()
+            request.post(base_url + "register", {user: user})
+                .then(function(response) {
+                    expect(response.status).toBe(200)
+                    next()
+                });
         });
     });
 });
