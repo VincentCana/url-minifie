@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { RegisterComponent} from './register.component';
 import { AuthentificationComponent } from './authentification.component';
 import { DashboardComponent } from './dashboard.component';
+import { DashboardFormComponent } from './dashboardForm.component';
+import { DashboardListComponent } from './dashboardList.component';
 import {Routes, RouterModule} from "@angular/router";
 
 
@@ -23,7 +25,9 @@ const appRoutes: Routes = [
     AppComponent,
     RegisterComponent,
     AuthentificationComponent,
-    DashboardComponent
+    DashboardComponent,
+    DashboardFormComponent,
+    DashboardListComponent
   ],
   imports: [
     BrowserModule,
