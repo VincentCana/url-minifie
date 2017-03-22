@@ -9,7 +9,7 @@
     <tr *ngFor="let url of urls">
       <td>{{url.url}}</td>
       <td>{{url.urlMinifie}}</td>
-      <td><a href="#!"><i class="material-icons">delete</i></a></td>
+      <td><button (click)="deleteUrl($event, url)"><i class="material-icons">delete</i></button></td>
     </tr>
   </tbody>
 </table>
