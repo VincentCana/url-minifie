@@ -1,10 +1,10 @@
 # url-minifie
 
-##Installation
+## Installation
 Pour installer les dépendances:
 ``npm install``
 
-##Init
+## Init
 * `npm run test`: run les tests de l'API
 * `npm run test-front`: run ng test
 * `npm run prod`: run node app.js
