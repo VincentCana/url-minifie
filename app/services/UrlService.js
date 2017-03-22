@@ -6,7 +6,10 @@ var UrlEntity = require('../models/UrlEntity');
 var urlSchema = require('../schemas/UrlSchema');
 
 
-function addUrl() {}
+function addUrl(url) {
+    UrlEntity.insertUrl(url, 'http://'+ url.substring(7, 5) + Date.now());
+    return url;
+}
 
 function getUrls() {}
 
@@ -21,6 +24,10 @@ function getUrl(url) {
 }
 
 function delUrl() {}
+
+function validateUrl(url){
+    return true;
+}
 
 // Export des méthodes publiques
 module.exports = {
