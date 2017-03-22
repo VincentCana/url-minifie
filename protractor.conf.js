@@ -3,6 +3,7 @@
 
 /*global jasmine */
 var SpecReporter = require('jasmine-spec-reporter');
+var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 
 exports.config = {
   allScriptsTimeout: 11000,
@@ -28,6 +29,11 @@ exports.config = {
   },
   onPrepare: function() {
     browser.driver.get(browser.baseUrl);
-    jasmine.getEnv().addReporter(new SpecReporter());
+    //jasmine.getEnv().addReporter(new SpecReporter());
+    jasmine.getEnv().addReporter(
+      new Jasmine2HtmlReporter({
+        savePath: 'protractorReport/screenshots'
+      })
+    );
   }
 };
