@@ -32,7 +32,7 @@ describe('url-minifie App', function() {
     expect(page.errorMessage.getText()).toEqual('Le courriel est vide');
   });
 
-  it('must redirect to dashboard', () => {
+  it('must redirect login to dashboard', () => {
     page.navigateTo();
     page.email.sendKeys('test@protractor.com');
     page.password.sendKeys('password');

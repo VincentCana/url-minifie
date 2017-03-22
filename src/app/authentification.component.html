@@ -12,13 +12,13 @@
   <form id="loginForm" class="col s12" (ngSubmit)="onSubmit()">
     <div class="row">
       <div class="input-field col s12">
-        <input id="email" type="email" class="validate" [(ngModel)]="email" name="email" required>
+        <input id="email" type="email" class="validate" [(ngModel)]="email" name="email">
         <label for="email" data-error="wrong" data-success="right">Courriel</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input id="password" type="password" class="validate" [(ngModel)]="password" name="password" required>
+        <input id="password" type="password" class="validate" [(ngModel)]="password" name="password">
         <label for="password" data-error="wrong" data-success="right">Mot de passe</label>
       </div>
     </div>
