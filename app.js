@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const app = express();
 const urlRoute = require('./app/routes/urlRoute');
 const userRoute = require('./app/routes/userRoute');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 app.use('/', urlRoute);
 app.use('/', userRoute);
