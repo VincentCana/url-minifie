@@ -8,9 +8,10 @@ class UrlController {
         if (UrlService.validateUrl(url)){
             let resUrl = UrlService.addUrl(url);
             if(resUrl !== false) {
-                res.status(200).send(resUrl);
+                res.send(resUrl);
+                return
             }
-        } 
+        }
         res.status(400).send('error');
     }
 
@@ -19,7 +20,9 @@ class UrlController {
     }
 
     getUrls(req, res) {
-        res.send('get urls');
+        UrlService.getUrls().addBack(function (err, docs) {
+          res.send(docs);
+        });
     }
 }
 
