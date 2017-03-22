@@ -1,4 +1,3 @@
-const UserController = require ('../controllers/UserController');
 const UserEntity = require('../models/UserEntity')
 
 class UserService {
@@ -7,7 +6,7 @@ class UserService {
         return re.test(mail);
     }
 
-    passwordValidator(password) {
+    passwordValidator (password) {
         let RegExp = /(?=.{5,})(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[!#?$])/;
         if (RegExp.test(password)) {
             return true;
