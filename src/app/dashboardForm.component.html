@@ -1,11 +1,12 @@
-<form class="col s12">
+<form class="col s12" (ngSubmit)="onSubmit()">
   <div class="row">
     <div class="input-field col s10">
-      <input id="url" type="text">
+      <input id="url" type="text" [(ngModel)]="url">
       <label for="url" >URL</label>
+      <span id="errorMessage" class="errorMessage">{{errorMessage}}</span>
     </div>
     <div class="input-field col s2">
-      <button class="btn waves-effect waves-light btn-add-url" type="submit" name="action">Ajouter</button>
+      <button id="submitButton" class="btn waves-effect waves-light btn-add-url" type="submit" name="action">Ajouter</button>
     </div>
   </div>
 </form>
