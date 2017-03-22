@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './dashboardList.component.html',
   styleUrls: ['./app.component.css']
 })
-export class DashboardListComponent {}
+export class DashboardListComponent {
+  urls = localStorage.getItem('urls') || [];
+}
