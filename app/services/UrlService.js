@@ -7,7 +7,12 @@ var urlSchema = require('../schemas/UrlSchema');
 
 
 function addUrl(url) {
-    UrlEntity.insertUrl(url, 'http://'+ url.substring(7, 5) + Date.now());
+    
+    let minify = url.replace('http://www.', '').replace('http://', '')
+    //console.log(url);
+    minify = 'http://'+ minify.substring(0, 5) + Date.now()
+    UrlEntity.insertUrl(url, minify);
+    conn.close();
     return url;
 }
 
@@ -26,7 +31,8 @@ function getUrl(url) {
 function delUrl() {}
 
 function validateUrl(url){
-    return true;
+    let regExp = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;  
+    return regExp.test(url);
 }
 
 // Export des méthodes publiques
@@ -34,7 +40,8 @@ module.exports = {
     addUrl: addUrl,
     getUrl: getUrl,
     getUrls: getUrls,
-    delUrl: delUrl
+    delUrl: delUrl,
+    validateUrl
 };
 
-getUrl('google.fr');
+//addUrl('http://stackoverflow.com/questions/8667070/javascript-regular-expression-to-validate-url');     
