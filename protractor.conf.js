@@ -27,6 +27,7 @@ exports.config = {
     });
   },
   onPrepare: function() {
+    browser.driver.get(browser.baseUrl);
     jasmine.getEnv().addReporter(new SpecReporter());
   }
 };

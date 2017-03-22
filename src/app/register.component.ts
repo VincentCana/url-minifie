@@ -13,9 +13,9 @@ import {Router} from "@angular/router";
 })
 export class RegisterComponent{
   url = 'https://imie-api-mock.cleverapps.io/register';
-  login = 'david.salmon@gmail.com';
-  password = 'pass';
-  confirmPassword = 'pass';
+  login = '';
+  password = '';
+  confirmPassword = '';
   errorMessage='';
 
 
