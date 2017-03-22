@@ -4,9 +4,14 @@ const UserService = require('../services/UserService');
 class UrlController {
 
     addUrl(req, res) {
-        let post = req.body;
-        let tmp = post.url;
-        console.log(tmp);
+        let url = req.body.url;
+        if (UrlService.validateUrl(url)){
+            let resUrl = UrlService.addUrl(url);
+            if(resUrl !== false) {
+                res.status(200).send(resUrl);
+            }
+        } 
+        res.status(400).send('error');
     }
 
     removeUrl(req, res) {
