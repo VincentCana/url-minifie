@@ -13,4 +13,8 @@ var insertUrl = function(url, urlMinifie) {
     });
 };
 
-module.exports = {Url, insertUrl};
+var getUrls = function() {
+    return Url.find().exec();
+};
+
+module.exports = {Url, insertUrl, getUrls};
