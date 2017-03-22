@@ -14,12 +14,23 @@ export class AuthentificationComponent {
   constructor(private http: Http, private router: Router){}
   title = 'Authentification';
 
-  email = null;
-  password = null;
+  email = '';
+  password = '';
   errorMessage = "";
 
   onSubmit() {
-    this.login();
+    if (this.email === '' && this.password === '') {
+      this.errorMessage = "Le courriel et le mot de passe sont vide";
+    }
+    else if (this.email === '' && this.password !== '') {
+      this.errorMessage = "Le courriel est vide";
+    }
+    else if (this.email !== '' && this.password === '') {
+      this.errorMessage = "Le mot de passe est vide";
+    }
+    else {
+      this.login();
+    }
   }
 
   login() {
