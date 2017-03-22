@@ -8,6 +8,9 @@ var insertUrl = function(url, urlMinifie) {
         url,
         urlMinifie
     });
+    link.save(function(err) {
+      if (err) return handleError(err);
+    });
 };
 
-module.exports = Url;
+module.exports = {Url, insertUrl};
