@@ -7,6 +7,7 @@ const messagePrefix = "-- ";
 
 describe("UserController", () => {
     describe(methodPrefix + "Page register", () => {
+
         // it(messagePrefix + "Register is ok", next => {
         //     let user = {
         //         email: 'toto@toto.fr',
@@ -20,5 +21,6 @@ describe("UserController", () => {
         //             next()
         //         });
         // });
+
     });
 });
