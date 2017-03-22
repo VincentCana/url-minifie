@@ -2,14 +2,14 @@
   <thead>
   <tr>
     <th data-field="source">URL sources</th>
-    <th data-field="minifie">URL minifie</th>
+    <th data-field="minifie">URL minifiée</th>
   </tr>
   </thead>
   <tbody>
     <tr *ngFor="let url of urls">
       <td>{{url.url}}</td>
       <td>{{url.urlMinifie}}</td>
-      <td><button (click)="deleteUrl($event, url)"><i class="material-icons">delete</i></button></td>
+      <td><button (click)="deleteUrl($event, url)"><i class="material-icons">supprimer</i></button></td>
     </tr>
   </tbody>
 </table>

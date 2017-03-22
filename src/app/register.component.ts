@@ -26,11 +26,11 @@
       let error = false;
       console.log(this.email);
       if(this.email === '')
-        this.errorMessage = 'email is empty';
+        this.errorMessage = 'Le courriel n\'est pas renseigné';
       else if(this.password === '')
-        this.errorMessage = 'password is empty';
+        this.errorMessage = 'Le mot de passe n\'est pas renseigné';
       else if(this.password !== this.confirmPassword)
-        this.errorMessage = 'confirm Password Error';
+        this.errorMessage = 'Les deux mots de passe ne sont pas identiques';
       else {
 
 

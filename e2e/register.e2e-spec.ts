@@ -17,7 +17,7 @@ describe('url-minifie App', function() {
     page.password.sendKeys('password');
     page.confirmPassword.sendKeys('fdssdf');
     page.submitButton.click();
-    expect(page.errorMessage.getText()).toEqual('confirm Password Error');
+    expect(page.errorMessage.getText()).toEqual('Les deux mots de passe ne sont pas identiques');
   });
 
   it('must show an empty email error',()=>{
@@ -26,7 +26,7 @@ describe('url-minifie App', function() {
     page.password.sendKeys('password');
     page.confirmPassword.sendKeys('fdssdf');
     page.submitButton.click();
-    expect(page.errorMessage.getText()).toEqual('email is empty');
+    expect(page.errorMessage.getText()).toEqual('Le courriel n\'est pas renseigné');
   });
 
   it('must show an empty email error',()=>{
@@ -35,7 +35,7 @@ describe('url-minifie App', function() {
     page.password.sendKeys('');
     page.confirmPassword.sendKeys('fdssdf');
     page.submitButton.click();
-    expect(page.errorMessage.getText()).toEqual('password is empty');
+    expect(page.errorMessage.getText()).toEqual('Le mot de passe n\'est pas renseigné');
   });
 
   it('must redirect to dashboard',()=>{
