@@ -1,4 +1,4 @@
-const UserEntity = require('../models/UserEntity')
+const UserEntity = require('../models/UserEntity');
 
 class UserService {
   emailValidator(mail) {
@@ -35,26 +35,28 @@ class UserService {
     });
     user.save(function(err) {
       if (err) {
-        return handleError(err)
+        return handleError(err);
       }
       console.log('user saved!');
     });
   }
 
   userConnect(mail, password) {
-    UserEntity.find({
-        email: mail
-      })
-      .then((doc) => {
-          console.log(doc);
-        if (password === doc.password) {
-          return doc;
-        } else {
-          return null;
-        }
-      }).catch((err) => {
-        console.log(err);
-      });
+    let result = new Promise((resolve, reject) => {
+      UserEntity.findOne({
+          email: mail
+        })
+        .then((doc) => {
+          if (password === doc.password) {
+            resolve(doc);
+          } else {
+            reject('mauvais password');
+          }
+        });
+    }).catch((err) => {
+      console.log(err);
+    });
+    return result;
   }
 }
 

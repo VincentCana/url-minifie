@@ -24,7 +24,10 @@ class UserController {
 
 
   connect(req, res) {
-    res.send('coucou');
+    UserService.userConnect(req.body.email, req.body.password).then((doc) => {
+      console.log(doc);
+      res.send(doc);
+    });
   }
 
 }
