@@ -31,6 +31,11 @@ class UserService {
     }
 
     userRegister( mail, password) {
+        let user = new UserEntity({email: mail, password: password});
+        user.save(function (err) {
+            if (err) { return handleError(err) }
+            console.log('user saved!');
+        });
 
 
     }

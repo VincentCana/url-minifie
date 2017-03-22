@@ -1,7 +1,7 @@
 // imports
 var mongoose = require('mongoose');
 var jwt = require('jsonwebtoken');
-var conn = require('../../config/connection');
+// var conn = require('../../config/connection');
 var UrlEntity = require('../models/UrlEntity');
 var urlSchema = require('../schemas/UrlSchema');
 
